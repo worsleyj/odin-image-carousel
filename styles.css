@@ -7,10 +7,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.slideshow-image {
+  width: auto;
+  height: 80%;
+}
 .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
+  height: 100%;
 }
 
 .next-image,
