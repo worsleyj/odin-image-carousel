@@ -12,6 +12,8 @@ const prevBtn = document.querySelector(".prev-image");
 function displayImage(index) {
   const slideshowImage = document.querySelector(".slideshow-image");
   slideshowImage.setAttribute("src", images[index]);
+
+  setTimeout(nextImage, 5000);
 }
 
 function nextImage() {
