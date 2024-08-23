@@ -9,11 +9,14 @@ const images = [
 const nextBtn = document.querySelector(".next-image");
 const prevBtn = document.querySelector(".prev-image");
 
+function slideshow() {
+  nextImage();
+  setTimeout(slideshow, 5000);
+}
+
 function displayImage(index) {
   const slideshowImage = document.querySelector(".slideshow-image");
   slideshowImage.setAttribute("src", images[index]);
-
-  setTimeout(nextImage, 5000);
 }
 
 function nextImage() {
@@ -50,4 +53,5 @@ function fillNav() {
 fillNav();
 nextBtn.addEventListener("click", nextImage);
 prevBtn.addEventListener("click", prevImage);
+slideshow();
 displayImage(0);
