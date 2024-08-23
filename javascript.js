@@ -35,6 +35,11 @@ function fillNav() {
     const newImage = document.createElement("img");
     newImage.className = "mini-preview";
     newImage.setAttribute("src", images[fillIndex]);
+    newImage.setAttribute("data-index", fillIndex);
+    newImage.addEventListener("click", () => {
+      displayImage(newImage.getAttribute("data-index"));
+      index = newImage.getAttribute("data-index");
+    });
     navContainer.append(newImage);
     fillIndex++;
   }
